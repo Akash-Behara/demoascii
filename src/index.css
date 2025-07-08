@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "proto-mono-regular";
+  src: url("/fonts/ProtoMono-Regular.woff") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "inter";
+  src: url("/fonts/Inter.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ace-attorney";
+  src: url("/fonts/Ace-Attorney.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0e0e0e;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100svh;
+}
+
+
+.text-outline-white {
+  font-family: 'ace-attorney';
+  color: #0e0e0e; /* fill color */
+  font-weight: bold;
+  position: relative;
+  text-shadow:
+    1px 0 white,
+    -1px 0 white,
+    0 1px white,
+    0 -1px white,
+    1px 1px white,
+    -1px -1px white,
+    1px -1px white,
+    -1px 1px white;
+}
+
+.text-outline-black {
+  font-family: 'ace-attorney';
+  color: white; /* fill color */
+  font-weight: bold;
+  position: relative;
+  text-shadow:
+    1px 0 black,
+    -1px 0 black,
+    0 1px black,
+    0 -1px black,
+    1px 1px black,
+    -1px -1px black,
+    1px -1px black,
+    -1px 1px black;
+}
+
+.fade-in {
+  opacity: 1 !important;
+}
