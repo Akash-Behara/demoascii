@@ -1,5 +1,5 @@
+import gsap, { TimelineMax } from "gsap";
 import { useEffect, useRef } from "react";
-import gsap, { TimelineMax, TweenMax } from "gsap";
 import LogoPng from "../../assets/logo.png";
 
 export default function AnimatedLogo() {

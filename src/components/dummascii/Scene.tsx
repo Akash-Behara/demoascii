@@ -1,12 +1,12 @@
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { AsciiEffect } from "three/examples/jsm/effects/AsciiEffect";
 import { useRef, useEffect } from "react";
 import ModelLoader from "./ModalLoader";
+import { AsciiEffect } from "three-stdlib";
 
 function Ascii() {
   const { gl, scene, camera, size } = useThree();
-  const effectRef = useRef<any>();
+  const effectRef = useRef<AsciiEffect>(null);
 
   useEffect(() => {
     const effect = new AsciiEffect(gl, " .:-=+*#%@", {

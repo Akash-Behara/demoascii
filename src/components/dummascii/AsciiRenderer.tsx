@@ -1,14 +1,13 @@
 // AsciiRenderer.tsx
+import { extend, useFrame, useThree } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
-import { AsciiEffect } from "three/examples/jsm/effects/AsciiEffect";
-import { extend, useThree, useFrame } from "@react-three/fiber";
-import * as THREE from "three";
+import { AsciiEffect } from "three-stdlib";
 
 extend({ AsciiEffect });
 
 export function Ascii({ renderIndex = 1 }) {
   const { gl, scene, camera, size } = useThree();
-  const effectRef = useRef(null);
+  const effectRef = useRef<AsciiEffect>(null);
 
   useEffect(() => {
     const effect = new AsciiEffect(gl, " .:-+*=%@#", {
