@@ -4,7 +4,7 @@ import logoDarkPng from "../../../assets/logo-dark.png";
 const Footer = () => {
   return (
     <div className="bg-[#f1f1f1] min-h-[760px] pt-20">
-      <div className="mx-20 flex justify-between text-black">
+      <div className="mx-10 md:mx-20 flex flex-wrap md:flex-nowrap justify-between text-black">
         <div>
           <div className="flex items-center text-3xl gap-1">
             <img src={logoDarkPng} alt="logo" className="size-8" />
@@ -14,7 +14,7 @@ const Footer = () => {
             SOME GOOD LINES ABOUT THE PRODUCT <br /> YUP IT'S GOOD.
           </div>
         </div>
-        <div className="flex gap-10">
+        <div className="flex gap-10 mt-20 md:mt-0">
           <div className="col-span-1 font-inter">
             <h2 className="mb-2 font-inter font-medium text-[18px]">Support</h2>
             <p>Support</p>

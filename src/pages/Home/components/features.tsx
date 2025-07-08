@@ -6,38 +6,38 @@ const Features = () => {
     <div className="flex flex-col items-center h-full w-full justify-center pt-20">
       <div className="max-w-[1200px] w-full">
         {/* 1ST */}
-        <div className="grid grid-cols-4">
-          <div className="col-span-1">
+        <div className="md:grid grid-cols-4 mx-10 md:mx-0">
+          <div className="col-span-1 row-span-1">
             <p className="flex items-end text-[230px] font-aceattorney text-outline-white">
               01.
             </p>
           </div>
-          <div className="col-span-3 ml-10">
-            <div className="mt-16 relative bg-gradient-to-b from-[#3a3a3a] via-[#989898] to-white bg-clip-text text-transparent">
+          <div className="col-span-3 md:ml-10">
+            <div className="md:mt-16 relative bg-gradient-to-b from-[#3a3a3a] via-[#989898] to-white bg-clip-text text-transparent">
               <p className="text-[24px]">studio</p>
               <p className="text-[24px]">international</p>
               <p className="text-[24px]">harbour house</p>
               <p className="text-[24px]">populo</p>
               <p className="text-[40px]">Hikarily network</p>
             </div>
-            <div className="mt-40">
-              <div className="flex justify-between items-start border-t-[0.8px] border-[#BFBFBF] pt-6">
+            <div className="mt-10 md:mt-40">
+              <div className="flex justify-between items-start flex-wrap border-t-[0.8px] border-[#BFBFBF] pt-6">
                 <div>
                   <p className="text-xl font-protomonoreg">IMPORT YRE</p>
                 </div>
                 <div>
-                  <p className="w-[470px] text-sm text-end font-inter">
+                  <p className="md:w-[470px] text-sm md:text-end font-inter mt-2 md:mt-0">
                     Import all your Calendly or Hubspot configurations with just
                     1 click, and enjoy a frictionless scheduling experience
                   </p>
                 </div>
               </div>
-              <div className="flex justify-between items-start mt-14 border-t-[0.8px] border-[#BFBFBF] pt-6">
+              <div className="flex justify-between items-start flex-wrap mt-14 border-t-[0.8px] border-[#BFBFBF] pt-6">
                 <div>
                   <p className="text-xl font-protomonoreg">IMPORT YRE</p>
                 </div>
                 <div>
-                  <p className="w-[470px] text-sm text-end font-inter">
+                  <p className="md:w-[470px] text-sm md:text-end font-inter mt-2 md:mt-0">
                     Import all your Calendly or Hubspot configurations with just
                     1 click, and enjoy a frictionless scheduling lemcal has been
                     a game-changer, allowing me to book meetings on
@@ -48,22 +48,23 @@ const Features = () => {
             </div>
           </div>
         </div>
+
         {/* 2ND */}
-        <div className="grid grid-cols-4 mt-52 border-t">
+        <div className="md:grid grid-cols-4 mt-40 md:mt-52 border-t mx-10 md:mx-0">
           <div className="col-span-1">
             <p className="flex items-end text-[230px] font-aceattorney text-outline-white">
               02.
             </p>
           </div>
-          <div className="col-span-3 ml-10 mb-40">
-            <div className="mt-36">
+          <div className="col-span-3 md:ml-10 mb-40">
+            <div className="md:mt-36">
               <p className="text-[60px] font-protomonoreg border-b-[0.8px] border-[#BFBFBF]">
                 Abstract
               </p>
             </div>
             <div className="grid grid-cols-6 mt-10">
               <div className="col-span-4">
-                <p className="text-lg font-aceattorney max-w-[500px] indent-10 leading-6">
+                <p className="text-lg font-aceattorney max-w-[240px] md:max-w-[500px] indent-10 leading-6">
                   Import all your Calendly or Hubspot configurations with just 1
                   click, and enjoy a frictionless scheduling lemcal has been a
                   game-changer, allowing me to book meetings on
@@ -91,23 +92,23 @@ const Features = () => {
         <WhiteStrips />
       </div>
       {/* 3RD */}
-      <div className="bg-white w-full flex justify-center pb-40">
+      <div className="bg-white w-full flex justify-center pb-40 px-10">
         <div className="max-w-[1200px] w-full">
           <div>
-            <p className="flex items-end text-[230px] font-aceattorney">
+            <p className="flex flex-wrap items-end text-[230px] font-aceattorney">
               <span className="text-outline-black">03.</span>
-              <span className="text-[64px] font-protomonoreg -translate-y-20 ml-10 text-black">
+              <span className="text-[64px] font-protomonoreg -translate-y-20 md:ml-10 text-black">
                 Features
               </span>
             </p>
           </div>
-          <div className="flex items-center gap-4 text-black">
+          <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-normal items-center gap-4 text-black">
             {features?.map((feature, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img
                   src={feature.img}
                   alt={`Feature ${index + 1}`}
-                  className="w-[301px] h-[300px]"
+                  className="md:w-[301px] md:h-[300px]"
                 />
                 <div className="mt-4 flex flex-col gap-2">
                   <div className="text-sm">{feature.title}</div>
