@@ -27,7 +27,7 @@ export default function ModelLoader({ path }: ModelLoaderProps) {
     const size = new THREE.Vector3();
     box.getSize(size);
     const maxAxis = Math.max(size.x, size.y, size.z);
-    const scale = 0.8 / maxAxis;
+    const scale = 2 / maxAxis;
     obj.scale.setScalar(scale);
   }, [obj, ref]);
 
