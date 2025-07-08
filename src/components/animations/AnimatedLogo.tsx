@@ -38,7 +38,7 @@ export default function AnimatedLogo() {
       rotate: -100,
     });
 
-    tl.to(logo, { duration: 2, opacity: 1, scale: 3 }) // stay visible 2s
+    tl.to(logo, { duration: 1, opacity: 1, scale: 3 }) // stay visible 2s
       .to(logo, {
         top: "5%",
         // yPercent: -1240, // move to top center

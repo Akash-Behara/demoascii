@@ -1,31 +1,47 @@
-// ModelLoader.tsx
 import { useFrame, useLoader, useThree } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
 import { OBJLoader } from "three-stdlib";
+import * as THREE from "three";
 
-export default function ModelLoader({ path }: { path: string }) {
-  const obj = useLoader(OBJLoader, path);
+interface ModelLoaderProps {
+  path: string;
+}
+
+export default function ModelLoader({ path }: ModelLoaderProps) {
+  const obj = useLoader(
+    OBJLoader,
+    path
+  ) as unknown as THREE.Group<THREE.Object3DEventMap>;
+
   const ref = useRef<THREE.Group>(null);
   const { mouse } = useThree();
 
   useEffect(() => {
-    obj.scale.set(1.5, 1.5, 1.5); // Increase size
-    obj.position.set(0, -0.5, 0.5); // Adjust position if needed
-  }, [obj]);
+    if (!obj) return;
+
+    const box = new THREE.Box3().setFromObject(obj);
+    const center = new THREE.Vector3();
+    box.getCenter(center);
+    obj.position.sub(center);
+
+    const size = new THREE.Vector3();
+    box.getSize(size);
+    const maxAxis = Math.max(size.x, size.y, size.z);
+    const scale = 0.4 / maxAxis;
+    obj.scale.setScalar(scale);
+  }, [obj, ref]);
 
   useFrame(() => {
     if (ref.current) {
-      ref.current.rotation.y = mouse.x * Math.PI * 0.05; // horizontal rotation
-      ref.current.rotation.x = mouse.y * Math.PI * 0.05; // vertical rotation
+      const baseTiltX = -0.7;
+      const baseTiltY = 0.4;
+      const baseTiltZ = 0.1;
+      ref.current.rotation.z = baseTiltZ + mouse.x * Math.PI * 0.1;
+
+      ref.current.rotation.y = baseTiltY + mouse.x * Math.PI * 0.1;
+      ref.current.rotation.x = baseTiltX + mouse.y * Math.PI * 0.1;
     }
   });
 
-  return (
-    <primitive
-      ref={ref}
-      object={obj}
-      scale={[1.4, 1.5, 2.2]}
-      rotation={[0, 1, 0.1]}
-    />
-  );
+  return <primitive ref={ref} object={obj} />;
 }

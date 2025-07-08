@@ -53,16 +53,18 @@ function Ascii() {
 
 export default function Scene() {
   return (
-    <Canvas gl={{ antialias: false }} style={{ background: "black" }} shadows>
+    <Canvas
+      camera={{ position: [0, 0, 5], fov: 35 }} // <-- lower fov
+      gl={{ antialias: false }}
+      style={{ background: "black" }}
+      shadows
+    >
       <color attach="background" args={["black"]} />
-      <ambientLight />
-      <directionalLight position={[0, 1, 1]} />
-      <ambientLight intensity={0.2} />
       <directionalLight position={[2, 2, 2]} intensity={1.5} castShadow />
       <directionalLight position={[-2, -1, -3]} intensity={0.8} />
       <ModelLoader path="/flower.obj" />
       <OrbitControls enableZoom={false} />
-      <Ascii /> {/* ✅ Inside Canvas — now it's safe */}
+      <Ascii />
     </Canvas>
   );
 }
