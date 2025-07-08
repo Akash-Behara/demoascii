@@ -14,12 +14,12 @@ const Navbar = () => {
         id="navbar-container"
         className="w-fit bg-[#0E0E0E] px-3 rounded-xl flex items-center gap-8 h-11 shadow-lg mt-8 z-50 transition-all duration-500 overflow-hidden"
       >
-        <div className="w-7 h-7 rounded-full">
+        <div className="size-7 rounded-full">
           <img
             id="navbar-logo"
             src={LogoPng}
             alt="Logo"
-            className="w-full h-full object-cover rounded-full"
+            className="navbar-logo w-full h-full object-cover rounded-full hidden"
           />
         </div>
 
