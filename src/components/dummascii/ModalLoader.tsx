@@ -28,7 +28,7 @@ export default function ModelLoader({ path }: ModelLoaderProps) {
     box.getSize(size);
     const maxAxis = Math.max(size.x, size.y, size.z);
     const scale = 2.8 / maxAxis;
-    obj.scale.set(scale, scale, scale * 1.4);
+    obj.scale.set(scale, scale, scale * 1.3);
   }, [obj, ref]);
 
   useFrame(() => {

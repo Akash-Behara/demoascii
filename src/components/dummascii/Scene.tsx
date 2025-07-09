@@ -11,7 +11,7 @@ function Ascii() {
   useEffect(() => {
     const effect = new AsciiEffect(gl, " `'-!*#$%", {
       invert: true,
-      resolution: 0.2,
+      resolution: 0.22,
     });
 
     effect.domElement.style.position = "absolute";

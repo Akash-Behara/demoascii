@@ -91,7 +91,7 @@ export default function AnimatedLogo() {
       })
       .to(logo, {
         xPercent: mobileView ? -700 : -940,
-        marginTop: mobileView ? -2 : 5.2,
+        marginTop: mobileView ? -2 : 5.3,
         duration: 1,
         onComplete: () => {
           gsap.to(navbarLogo, {
