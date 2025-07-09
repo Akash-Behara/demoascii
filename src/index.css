@@ -10,6 +10,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "proto-mono-bold";
+  src: url("/fonts/ProtoMono-SemiBold.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "inter";
   src: url("/fonts/Inter.ttf") format("opentype");
   font-weight: normal;

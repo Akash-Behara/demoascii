@@ -1,15 +1,15 @@
-import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { useRef, useEffect } from "react";
-import ModelLoader from "./ModalLoader";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { useEffect, useRef } from "react";
 import { AsciiEffect } from "three-stdlib";
+import ModelLoader from "./ModalLoader";
 
 function Ascii() {
   const { gl, scene, camera, size } = useThree();
   const effectRef = useRef<AsciiEffect>(null);
 
   useEffect(() => {
-    const effect = new AsciiEffect(gl, " =:-=+*#%@", {
+    const effect = new AsciiEffect(gl, " `'-!*#$%", {
       invert: true,
       resolution: 0.2,
     });
@@ -18,18 +18,17 @@ function Ascii() {
     effect.domElement.style.top = "0";
     effect.domElement.style.left = "0";
     effect.domElement.style.pointerEvents = "none";
-    effect.domElement.style.color = "white";
-    effect.domElement.style.backgroundColor = "black";
-    effect.domElement.style.width = "100%";
-    effect.domElement.style.height = "100%";
     effect.domElement.style.zIndex = "10";
-
-    effect.domElement.style.fontFamily = "Courier, monospace";
-    effect.domElement.style.fontSize = "6px"; // Smaller = sharper
-    effect.domElement.style.lineHeight = "6px";
-    effect.domElement.style.letterSpacing = "0px";
-    effect.domElement.style.color = "#ccc"; // Light gray for clarity
+    effect.domElement.style.color = "#999";
     effect.domElement.style.backgroundColor = "black";
+
+    // Key improvements 👇
+    effect.domElement.style.fontFamily = "'Courier New', monospace";
+    effect.domElement.style.fontSize = "4.5px"; // smaller font
+    effect.domElement.style.lineHeight = "4.5px"; // tighter lines
+    effect.domElement.style.letterSpacing = "-0.5px"; // reduce horizontal space
+    effect.domElement.style.textRendering = "optimizeSpeed";
+    effect.domElement.style.imageRendering = "pixelated";
 
     const container = document.getElementById("ascii-wrapper");
     container?.appendChild(effect.domElement);
@@ -54,14 +53,25 @@ function Ascii() {
 export default function Scene() {
   return (
     <Canvas
-      camera={{ position: [0, 0, 5], fov: 35 }} // <-- lower fov
+      // camera={{ position: [0, 0, 5], fov: 40 }}
+      camera={{ fov: 40, position: [0, 0, 5] }} // <-- lower fov
       gl={{ antialias: false }}
-      style={{ background: "black" }}
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "block",
+        position: "absolute", // make canvas and ascii stack
+        top: 0,
+        left: 0,
+        zIndex: 1,
+        background: "black",
+      }}
       shadows
     >
       <color attach="background" args={["black"]} />
       <directionalLight position={[2, 2, 2]} intensity={1.5} castShadow />
       <directionalLight position={[-2, -1, -3]} intensity={0.8} />
+
       <ModelLoader path="/flower.obj" />
       <OrbitControls enableZoom={false} />
       <Ascii />

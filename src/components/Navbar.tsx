@@ -12,7 +12,7 @@ const Navbar = () => {
       <div
         ref={navbarRef}
         id="navbar-container"
-        className="w-fit bg-[#0E0E0E] px-3 rounded-xl flex items-center gap-8 h-11 shadow-lg mt-8 z-50 transition-all duration-500 overflow-hidden"
+        className="w-fit bg-[#0E0E0E] px-3 rounded-xl flex items-center gap-2 md:gap-8 h-12 shadow-lg mt-8 z-50 transition-all duration-500 overflow-hidden"
       >
         <div className="size-7 rounded-full">
           <img
@@ -23,16 +23,16 @@ const Navbar = () => {
           />
         </div>
 
-        <div className="flex items-center gap-4 text-sm font-medium">
+        <div className="flex items-center gap-4 text-sm md:text-base font-medium">
           <p className="cursor-pointer uppercase">Documents</p>
           <p className="cursor-pointer uppercase">Research</p>
         </div>
 
-        <div className="flex items-center gap-4 text-sm font-medium">
-          <button className="px-3 py-1 rounded-lg uppercase text-xs text-[#D0D0D0] border-[0.4px] border-[#D0D0D0]">
+        <div className="flex items-center gap-4 font-medium translate-x-2 justify-self-end">
+          <button className="px-3 py-1 rounded-lg uppercase text-[10px] md:text-[13px] text-[#D0D0D0] border-[0.4px] border-[#D0D0D0]">
             Sign in
           </button>
-          <button className="uppercase text-xs font-medium bg-white px-3 py-1 rounded-md shadow text-black">
+          <button className="uppercase text-[10px] md:text-[13px] font-medium bg-white px-3 py-1 rounded-md shadow text-black">
             Join waitlist
           </button>
         </div>

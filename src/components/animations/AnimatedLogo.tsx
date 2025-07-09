@@ -4,6 +4,7 @@ import LogoPng from "../../assets/logo.png";
 
 export default function AnimatedLogo() {
   const logoRef = useRef<HTMLDivElement>(null);
+  const mobileView = window.innerWidth < 768;
 
   useEffect(() => {
     const logo = logoRef.current;
@@ -59,8 +60,8 @@ export default function AnimatedLogo() {
           }
           if (navBarContainer) {
             tlm.from(navBarContainer, { width: 0 }).to(navBarContainer, {
-              left: 400,
-              width: 505,
+              // left: 400,
+              width: mobileView ? 410 : 550,
               opacity: 1,
               backgroundColor: "#1C1C1C",
             });
@@ -89,9 +90,9 @@ export default function AnimatedLogo() {
         },
       })
       .to(logo, {
-        xPercent: -858,
-        marginTop: 4,
-        duration: 0.8,
+        xPercent: mobileView ? -700 : -940,
+        marginTop: mobileView ? -2 : 5.2,
+        duration: 1,
         onComplete: () => {
           gsap.to(navbarLogo, {
             display: "flex",

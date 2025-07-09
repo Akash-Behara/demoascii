@@ -27,17 +27,21 @@ export default function ModelLoader({ path }: ModelLoaderProps) {
     const size = new THREE.Vector3();
     box.getSize(size);
     const maxAxis = Math.max(size.x, size.y, size.z);
-    const scale = 2.8 / maxAxis;
-    obj.scale.setScalar(scale);
+    const scale = 1.4 / maxAxis;
+    obj.scale.set(scale, scale, scale * 1.4);
   }, [obj, ref]);
 
   useFrame(() => {
     if (ref.current) {
-      const baseTiltX = -0.7;
-      const baseTiltY = 0.4;
-      const baseTiltZ = 0.1;
-      ref.current.rotation.z = baseTiltZ + mouse.x * Math.PI * 0.1;
+      const baseTiltX = -0.6;
+      const baseTiltY = 0.3;
+      const baseTiltZ = 0.03;
 
+      // ref.current.rotation.z = baseTiltZ;
+      // ref.current.rotation.y = baseTiltY;
+      // ref.current.rotation.x = baseTiltX;
+
+      ref.current.rotation.z = baseTiltZ + mouse.x * Math.PI * 0.1;
       ref.current.rotation.y = baseTiltY + mouse.x * Math.PI * 0.1;
       ref.current.rotation.x = baseTiltX + mouse.y * Math.PI * 0.1;
     }

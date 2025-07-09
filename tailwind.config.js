@@ -9,6 +9,7 @@ export default {
     extend: {
       fontFamily: {
         protomonoreg: ["proto-mono-regular"],
+        protomonobold: ["proto-mono-bold"],
         inter: ["inter"],
         aceattorney: ["ace-attorney"],
       },

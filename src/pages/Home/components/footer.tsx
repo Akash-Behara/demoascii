@@ -14,27 +14,25 @@ const Footer = () => {
             SOME GOOD LINES ABOUT THE PRODUCT <br /> YUP IT'S GOOD.
           </div>
         </div>
-        <div className="flex gap-10 mt-20 md:mt-0">
-          <div className="col-span-1 font-inter">
-            <h2 className="mb-2 font-inter font-medium text-[18px]">Support</h2>
+        <div className="flex flex-wrap gap-10 mt-20 md:mt-0">
+          <div className="col-span-1 font-protomonoreg">
+            <h2 className="mb-2 font-protomonobold text-[18px]">Support</h2>
             <p>Support</p>
             <p>FAQ</p>
             <p>Contact</p>
           </div>
-          <div className="col-span-1 font-inter">
-            <h2 className="mb-2 font-inter font-medium text-[18px]">Legal</h2>
+          <div className="col-span-1">
+            <h2 className="mb-2 font-protomonobold text-[18px]">Legal</h2>
             <p>Privacy policy</p>
             <p>Terms & Conditions</p>
           </div>
-          <div className="col-span-1 font-inter">
-            <h2 className="mb-2 font-inter font-medium text-[18px]">Explore</h2>
+          <div className="col-span-1">
+            <h2 className="mb-2 font-protomonobold text-[18px]">Explore</h2>
             <p>Blogs & resources</p>
             <p>About us</p>
           </div>
-          <div className="col-span-1 font-inter">
-            <h2 className="mb-2 font-inter font-medium text-[18px]">
-              Feedback
-            </h2>
+          <div className="col-span-1">
+            <h2 className="mb-2 font-protomonobold text-[18px]">Feedback</h2>
             <p>Feedback</p>
           </div>
         </div>

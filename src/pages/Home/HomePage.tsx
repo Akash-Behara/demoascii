@@ -11,7 +11,7 @@ const HomePage = () => {
       className="relative w-svw h-full font-protomonoreg opacity-0 transition-opacity"
     >
       <div className="h-svh relative bg-[#1a1a1a]">
-        <div className="absolute top-0 left-0 inset-0 h-svh w-svh bg-[#232323]/20 z-10 pointer-events-none"></div>
+        {/* <div className="absolute top-0 left-0 inset-0 h-svh w-svh bg-[#232323]/20 z-10 pointer-events-none"></div>
         <div
           id="hero-overlay"
           className="absolute top-0 left-0 inset-0 h-svh w-svh bg-[#232323]/30 z-10 pointer-events-none"
@@ -44,10 +44,10 @@ const HomePage = () => {
             id="hero-overlay-strips"
             className=" hero-overlay-strips h-6 w-full bg-[#232323]/10 absolute top-[91%]"
           ></div>
-        </div>
+        </div> */}
         <Hero />
       </div>
-      <div className="min-h-svh w-full">
+      <div className="w-full">
         <Features />
       </div>
       <div className="w-full">

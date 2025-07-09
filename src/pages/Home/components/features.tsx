@@ -1,11 +1,9 @@
 import Feat1Png from "../../../assets/feat-1.png";
-import WhiteStrips from "./WhiteStrips";
 
 const Features = () => {
   return (
-    <div className="flex flex-col items-center h-full w-full justify-center pt-20">
-      <div className="max-w-[1200px] w-full">
-        {/* 1ST */}
+    <div className="flex flex-col items-center h-full w-full justify-center">
+      {/* <div className="max-w-[1200px] w-full">
         <div className="md:grid grid-cols-4 mx-10 md:mx-0">
           <div className="col-span-1 row-span-1">
             <p className="flex items-end text-[230px] font-aceattorney text-outline-white">
@@ -48,8 +46,6 @@ const Features = () => {
             </div>
           </div>
         </div>
-
-        {/* 2ND */}
         <div className="md:grid grid-cols-4 mt-40 md:mt-52 border-t mx-10 md:mx-0">
           <div className="col-span-1">
             <p className="flex items-end text-[230px] font-aceattorney text-outline-white">
@@ -87,22 +83,22 @@ const Features = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="w-full">
+      </div> */}
+      {/* <div className="w-full">
         <WhiteStrips />
-      </div>
+      </div> */}
       {/* 3RD */}
       <div className="bg-white w-full flex justify-center pb-40 px-10">
         <div className="max-w-[1200px] w-full">
           <div>
             <p className="flex flex-wrap items-end text-[230px] font-aceattorney">
-              <span className="text-outline-black">03.</span>
+              <span className="text-outline-black">01.</span>
               <span className="text-[64px] font-protomonoreg -translate-y-20 md:ml-10 text-black">
-                Features
+                BLOGS
               </span>
             </p>
           </div>
-          <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-normal items-center gap-4 text-black">
+          <div className="flex flex-wrap xl:flex-nowrap justify-center md:justify-normal items-center gap-4 text-black">
             {features?.map((feature, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img
