@@ -9,9 +9,9 @@ function Ascii() {
   const effectRef = useRef<AsciiEffect>(null);
 
   useEffect(() => {
-    const effect = new AsciiEffect(gl, " .:-=+*#%@", {
+    const effect = new AsciiEffect(gl, " =:-=+*#%@", {
       invert: true,
-      resolution: 0.18,
+      resolution: 0.2,
     });
 
     effect.domElement.style.position = "absolute";

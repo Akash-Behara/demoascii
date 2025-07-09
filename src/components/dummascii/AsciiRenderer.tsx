@@ -12,7 +12,7 @@ export function Ascii({ renderIndex = 1 }) {
   useEffect(() => {
     const effect = new AsciiEffect(gl, " .:-+*=%@#", {
       invert: true,
-      resolution: 0.15,
+      resolution: 0.01,
     });
 
     effect.domElement.style.position = "absolute";
@@ -22,7 +22,7 @@ export function Ascii({ renderIndex = 1 }) {
     effect.domElement.style.backgroundColor = "black";
 
     effect.domElement.style.fontFamily = "Courier, monospace";
-    effect.domElement.style.fontSize = "6px"; // Smaller = sharper
+    effect.domElement.style.fontSize = "4px"; // Smaller = sharper
     effect.domElement.style.lineHeight = "6px";
     effect.domElement.style.letterSpacing = "0px";
     effect.domElement.style.color = "#ccc"; // Light gray for clarity

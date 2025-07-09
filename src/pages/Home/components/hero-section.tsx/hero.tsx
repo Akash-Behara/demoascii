@@ -1,10 +1,10 @@
+import { Parallax } from "react-scroll-parallax";
 import Scene from "../../../../components/dummascii/Scene";
 
 const Hero = () => {
   return (
     <>
       <div className="absolute inset-0 z-0">
-        {/* <Ascii /> */}
         <div
           id="ascii-wrapper"
           style={{
@@ -19,30 +19,32 @@ const Hero = () => {
       </div>
 
       {/* Overlay UI */}
-      <div className="absolute inset-0 z-20 pointer-events-none flex items-center justify-center">
-        <div className="flex flex-col justify-center items-center w-full">
-          <div className="flex w-[340px] flex-end justify-end items-end translate-x-16 md:translate-x-80 absolute top-32 md:top-52">
-            <p id="hero-subText" className="hero-subTex text-end text-xs">
-              Long & short perpetuals, spot, stocks & commodities with your
-              friends in telegram group chats or on mobile. The fastest &
-              simplest way to trade on Fogo with 0 fees on market orders
-            </p>
-          </div>
-          <div
-            id="hero-heading"
-            className="hero-heading text-white text-2xl md:text-6xl font-medium pointer-events-auto tracking-wider"
-          >
-            TRADING AT THE SPEED OF LIGHT
-          </div>
+      <Parallax speed={-10} className="relative z-10">
+        <div className="absolute h-svh w-full inset-0 z-50 pointer-events-none flex items-center justify-center">
+          <div className="flex flex-col justify-center items-center w-full">
+            <div className="flex w-[340px] flex-end justify-end items-end translate-x-16 md:translate-x-[360px] absolute top-32 md:top-48">
+              <p id="hero-subText" className="hero-subTex text-end text-xs">
+                Long & short perpetuals, spot, stocks & commodities with your
+                friends in telegram group chats or on mobile. The fastest &
+                simplest way to trade on Fogo with 0 fees on market orders
+              </p>
+            </div>
+            <div
+              id="hero-heading"
+              className="hero-heading text-white text-2xl md:text-6xl font-medium pointer-events-auto tracking-wider"
+            >
+              TRADING AT THE SPEED OF LIGHT
+            </div>
 
-          <button
-            id="hero-btn"
-            className="hero-btn bg-white text-black rounded-md w-[320px] pointer-events-auto h-9 uppercase font-bold cursor-pointer translate-y-10"
-          >
-            Start Trading
-          </button>
+            <button
+              id="hero-btn"
+              className="hero-btn bg-white text-black rounded-md w-[320px] pointer-events-auto h-9 uppercase font-bold cursor-pointer translate-y-10"
+            >
+              Start Trading
+            </button>
+          </div>
         </div>
-      </div>
+      </Parallax>
     </>
   );
 };
