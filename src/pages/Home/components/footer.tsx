@@ -1,10 +1,10 @@
-import asciiEarthPng from "../../../assets/ascii-earth-2.png";
+import asciiEarthPng from "../../../assets/ascii-art-earth.png";
 import logoDarkPng from "../../../assets/logo-dark.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[#f1f1f1] min-h-[760px] pt-20">
-      <div className="mx-10 md:mx-20 flex flex-wrap md:flex-nowrap justify-between text-black">
+    <div className="bg-white min-h-[760px] pt-20">
+      <div className="mx-10 md:mx-20 flex flex-wrap md:flex-nowrap justify-between text-black relative z-20">
         <div>
           <div className="flex items-center text-3xl gap-1">
             <img src={logoDarkPng} alt="logo" className="size-8" />
@@ -37,12 +37,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 text-center text-sm text-gray-500">
-        <img
-          src={asciiEarthPng}
-          alt="ascii-earth"
-          className="w-full object-cover mt-10"
-        />
+      <div className="absolute bottom-0 left-0 right-0 text-center text-sm text-gray-500 z-0">
+        <img src={asciiEarthPng} alt="ascii-earth" className="w-full mt-10" />
       </div>
     </div>
   );
