@@ -54,7 +54,7 @@ export default function Scene() {
   return (
     <Canvas
       // camera={{ position: [0, 0, 5], fov: 40 }}
-      camera={{ fov: 40, position: [0, 0, 5] }} // <-- lower fov
+      camera={{ fov: 40, position: [0, 0, 5], isPerspectiveCamera: true }} // <-- lower fov
       gl={{ antialias: false }}
       style={{
         width: "100%",

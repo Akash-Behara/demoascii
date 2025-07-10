@@ -12,7 +12,8 @@ export default function AnimatedLogo() {
     const navBar = document.getElementById("nav-bar");
     const navBarContainer = document.getElementById("navbar-container");
     const heroOverlay = document.getElementById("hero-overlay");
-    const heroHeading = document.getElementById("hero-heading");
+    const heroHeading = document.querySelector(".hero-heading");
+    const heroBtn = document.querySelector(".hero-btn");
     const navbarLogo = document.querySelector(".navbar-logo");
     const heroOverlayStrips = document.querySelectorAll(".hero-overlay-strips");
 
@@ -85,7 +86,18 @@ export default function AnimatedLogo() {
           }
 
           if (heroHeading) {
-            gsap.fromTo("hero-heading", { y: -200 }, { y: 0 });
+            gsap.fromTo(
+              ".hero-heading",
+              { y: 500, duration: 0.8 },
+              { y: -100 }
+            );
+          }
+          if (heroBtn) {
+            gsap.fromTo(
+              ".hero-btn",
+              { y: 500 },
+              { y: -50, duration: 0.4, delay: 0.2 }
+            );
           }
         },
       })
