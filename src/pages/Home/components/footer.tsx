@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-wrap gap-10 mt-20 md:mt-0">
-          <div className="col-span-1 font-protomonoreg">
+          {/* <div className="col-span-1 font-protomonoreg">
             <h2 className="mb-2 font-protomonobold text-[18px]">Support</h2>
             <p>Support</p>
             <p>FAQ</p>
@@ -25,16 +25,16 @@ const Footer = () => {
             <h2 className="mb-2 font-protomonobold text-[18px]">Legal</h2>
             <p>Privacy policy</p>
             <p>Terms & Conditions</p>
-          </div>
+          </div> */}
           <div className="col-span-1">
             <h2 className="mb-2 font-protomonobold text-[18px]">Explore</h2>
-            <p>Blogs & resources</p>
-            <p>About us</p>
+            <p className="cursor-pointer">Blogs & resources</p>
+            <p className="cursor-pointer">About us</p>
           </div>
-          <div className="col-span-1">
+          {/* <div className="col-span-1">
             <h2 className="mb-2 font-protomonobold text-[18px]">Feedback</h2>
             <p>Feedback</p>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 text-center text-sm text-gray-500 z-0">

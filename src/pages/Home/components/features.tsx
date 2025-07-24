@@ -1,4 +1,7 @@
 import Feat1Png from "../../../assets/feat-1.png";
+import Feat2Png from "../../../assets/feat-2.png";
+import Feat3Png from "../../../assets/feat-3.png";
+import Feat4Png from "../../../assets/feat-4.png";
 
 const Features = () => {
   return (
@@ -131,19 +134,19 @@ const features = [
       "Import all your calendly or huspot Configurations with just 1 click",
   },
   {
-    img: Feat1Png,
+    img: Feat2Png,
     title: "Do the things right way",
     description:
       "Import all your calendly or huspot Configurations with just 1 click",
   },
   {
-    img: Feat1Png,
+    img: Feat3Png,
     title: "Do the things right way",
     description:
       "Import all your calendly or huspot Configurations with just 1 click",
   },
   {
-    img: Feat1Png,
+    img: Feat4Png,
     title: "Do the things right way",
     description:
       "Import all your calendly or huspot Configurations with just 1 click",

@@ -27,8 +27,8 @@ export default function ModelLoader({ path }: ModelLoaderProps) {
     const size = new THREE.Vector3();
     box.getSize(size);
     const maxAxis = Math.max(size.x, size.y, size.z);
-    const scale = 2.8 / maxAxis;
-    obj.scale.set(scale, scale, scale * 1.3);
+    const scale = 2.4 / maxAxis;
+    obj.scale.set(scale * 1.2, scale * 1.1, scale * 1.3);
   }, [obj, ref]);
 
   useFrame(() => {
@@ -41,9 +41,9 @@ export default function ModelLoader({ path }: ModelLoaderProps) {
       // ref.current.rotation.y = baseTiltY;
       // ref.current.rotation.x = baseTiltX;
 
-      ref.current.rotation.z = baseTiltZ + mouse.x * Math.PI * 0.1;
-      ref.current.rotation.y = baseTiltY + mouse.x * Math.PI * 0.1;
-      ref.current.rotation.x = baseTiltX + mouse.y * Math.PI * 0.1;
+      ref.current.rotation.z = baseTiltZ + mouse.x * Math.PI * 0.18;
+      ref.current.rotation.y = baseTiltY + mouse.x * Math.PI * 0.18;
+      ref.current.rotation.x = baseTiltX + mouse.y * Math.PI * 0.18;
     }
   });
 

@@ -40,7 +40,7 @@ export default function AnimatedLogo() {
       rotate: -100,
     });
 
-    tl.to(logo, { duration: 1, opacity: 1, scale: 3 }) // stay visible 2s
+    tl.to(logo, { duration: 0.8, opacity: 1, scale: 3 }) // stay visible 2s
       .to(logo, {
         top: "6.4%",
         scale: 1.5,
