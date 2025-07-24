@@ -28,7 +28,7 @@ export default function ModelLoader({ path }: ModelLoaderProps) {
     box.getSize(size);
     const maxAxis = Math.max(size.x, size.y, size.z);
     const scale = 2.4 / maxAxis;
-    obj.scale.set(scale * 1.2, scale * 1.1, scale * 1.3);
+    obj.scale.set(scale * 1.2, scale, scale * 1.3);
   }, [obj, ref]);
 
   useFrame(() => {
@@ -37,9 +37,9 @@ export default function ModelLoader({ path }: ModelLoaderProps) {
       const baseTiltY = 0.3;
       const baseTiltZ = 0.03;
 
-      // ref.current.rotation.z = baseTiltZ;
-      // ref.current.rotation.y = baseTiltY;
-      // ref.current.rotation.x = baseTiltX;
+      ref.current.rotation.z = baseTiltZ;
+      ref.current.rotation.y = baseTiltY;
+      ref.current.rotation.x = baseTiltX;
 
       ref.current.rotation.z = baseTiltZ + mouse.x * Math.PI * 0.18;
       ref.current.rotation.y = baseTiltY + mouse.x * Math.PI * 0.18;

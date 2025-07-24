@@ -5,7 +5,7 @@ import Feat4Png from "../../../assets/feat-4.png";
 
 const Features = () => {
   return (
-    <div className="flex flex-col items-center h-full w-full justify-center">
+    <div className="flex flex-col items-center h-full w-full justify-center xl:min-h-[80svh]">
       {/* <div className="max-w-[1200px] w-full">
         <div className="md:grid grid-cols-4 mx-10 md:mx-0">
           <div className="col-span-1 row-span-1">
@@ -104,12 +104,15 @@ const Features = () => {
           <div className="flex flex-wrap xl:flex-nowrap justify-center md:justify-normal items-center gap-4 text-black">
             {features?.map((feature, index) => (
               <div key={index} className="flex flex-col items-center">
-                <img
-                  src={feature.img}
-                  alt={`Feature ${index + 1}`}
-                  className="md:w-[301px] md:h-[300px]"
-                />
-                <div className="mt-4 flex flex-col gap-2">
+                <div className="relative w-full h-full">
+                  <img
+                    src={feature.img}
+                    alt={`Feature ${index + 1}`}
+                    className="w-[301px] h-[300px]"
+                  />
+                  <div className="absolute -top-4 left-0 bg-[#ce2f2f] mt-4 z-50"></div>
+                </div>
+                <div className="mt-4 flex flex-col gap-2 h-full">
                   <div className="text-sm">{feature.title}</div>
                   <div className="w-[290px] text-sm font-inter">
                     {feature.description}
